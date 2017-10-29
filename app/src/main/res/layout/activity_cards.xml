@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.chilangolabs.mdb.CardsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_blue" />
+
+        <RelativeLayout
+            android:id="@+id/containerToolbarCards"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarCards"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="6dp" />
+
+            <com.chilangolabs.mdb.customviews.MDBTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Heladeria Supernova"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:type="light" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcCardsMainView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/containerToolbarCards" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.chilangolabs.mdb.customviews.MDBTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saldo Disponible"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <com.chilangolabs.mdb.customviews.MDBTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 23,728.00"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:type="semiBold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.chilangolabs.mdb.customviews.MDBTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dinero Enviado"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <com.chilangolabs.mdb.customviews.MDBTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 0.00"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:type="semiBold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.chilangolabs.mdb.customviews.MDBTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Mis Cuentas"
+        android:textColor="#64000000"
+        app:type="light" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcCardsMainViewAccounts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_accounts" />
+
+        <LinearLayout
+            android:id="@+id/rcCardsMainViewAccountsEmptyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="-40dp"
+                android:src="@drawable/ic_sad_face" />
+
+            <com.chilangolabs.mdb.customviews.MDBTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Aun no has añadido\nninguna cuenta destino"
+                android:textColor="#64000000"
+                app:type="semiBold" />
+
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_plus_white"
+            app:fabSize="normal" />
+
+    </RelativeLayout>
+
+</LinearLayout>

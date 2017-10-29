@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemeBlueForm">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,11 +21,12 @@
         <activity
             android:name=".WelcomeActivity"
             android:theme="@style/AppThemeBlue" />
+        <activity android:name=".TellUsAboutYourBussines" />
+        <activity android:name=".SelectMainCardActivity" />
+        <activity android:name=".AddDestinyAccountActivity" />
         <activity
-            android:name=".TellUsAboutYourBussines" />
-        <activity
-            android:name=".SelectMainCardActivity" />
-        <activity android:name=".AddDestinyAccountActivity"></activity>
+            android:name=".CardsActivity"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>
