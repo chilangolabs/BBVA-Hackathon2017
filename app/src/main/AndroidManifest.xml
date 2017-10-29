@@ -19,6 +19,12 @@
         <activity
             android:name=".WelcomeActivity"
             android:theme="@style/AppThemeBlue" />
+        <activity
+            android:name=".TellUsAboutYourBussines"
+            android:theme="@style/AppThemeBlueForm" />
+        <activity
+            android:name=".SelectMainCardActivity"
+            android:theme="@style/AppThemeBlueForm" />
     </application>
 
 </manifest>

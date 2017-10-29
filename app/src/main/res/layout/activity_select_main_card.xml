@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".WelcomeActivity">
+    tools:context="com.chilangolabs.mdb.SelectMainCardActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbarWelcome"
+            android:id="@+id/toolbarMainCard"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimary"
@@ -43,41 +44,45 @@
 
     </RelativeLayout>
 
-    <LinearLayout
+    <com.chilangolabs.mdb.customviews.MDBTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Selecciona tu tarjeta principal"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:type="semiBold" />
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/bg_form_white_border"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:paddingTop="40dp">
 
-        <com.chilangolabs.mdb.customviews.MDBTextView
-            android:layout_width="wrap_content"
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="¡Bienvenido Christian!"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            app:type="semiBold" />
-
-        <com.chilangolabs.mdb.customviews.MDBTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:text="Esto es Bancomer Micro Dispersión\nuna aplicación para ayudarte a dristribuir mejor el dinero para tus empleados\n\nEmpezaremos configurando tu cuenta"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            app:type="light" />
+            android:layout_above="@+id/btnMainCardSelect"
+            android:layout_alignParentTop="true" />
 
         <Button
-            android:id="@+id/btnWelcomeGo"
+            android:id="@+id/btnMainCardSelect"
+            style="?attr/buttonBarStyle"
             android:layout_width="207dp"
             android:layout_height="42dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/bg_button_corner_white"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_button_blue_gradient"
             android:gravity="center"
-            android:text="Comencemos"
-            android:textColor="@color/colorPrimary" />
+            android:text="Entrar"
+            android:textColor="@android:color/white" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>

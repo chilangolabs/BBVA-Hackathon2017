@@ -16,4 +16,17 @@
         <item name="android:windowBackground">@drawable/bg_blue</item>
     </style>
 
+    <style name="AppThemeBlueForm" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@drawable/bg_blue</item>
+    </style>
+
+    <style name="edtx_form">
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:background">@drawable/bg_border_corner_radius_edtx</item>
+    </style>
+
 </resources>

@@ -69,10 +69,9 @@
         app:type="regular" />
 
     <EditText
+        style="@style/edtx_form"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:background="@drawable/bg_border_corner_radius_edtx"
         android:inputType="number"
         android:maxLines="1" />
 
@@ -85,10 +84,9 @@
         app:type="regular" />
 
     <EditText
+        style="@style/edtx_form"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:background="@drawable/bg_border_corner_radius_edtx"
         android:inputType="textPassword"
         android:maxLines="1" />
 
