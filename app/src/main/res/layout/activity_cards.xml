@@ -99,7 +99,7 @@
             <com.chilangolabs.mdb.customviews.MDBTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="$ 0.00"
+                android:text="$3000.00"
                 android:textColor="@android:color/white"
                 android:textSize="20sp"
                 app:type="semiBold" />
