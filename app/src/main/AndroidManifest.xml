@@ -40,7 +40,13 @@
         <activity android:name=".NewAccountBancomerActivity" />
         <activity android:name=".RegisterAccountCPCURPActivity" />
         <activity android:name=".RegisterPersonalInfoActivity" />
-        <activity android:name=".RegisterAddressActivity"></activity>
+        <activity android:name=".RegisterAddressActivity" />
+        <activity
+            android:name=".TransferActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ConfirmTransferActivity"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

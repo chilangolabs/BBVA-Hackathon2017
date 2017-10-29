@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.chilangolabs.mdb.TransferActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarTransfer"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="6dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="8dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_bbva_white" />
+
+            <com.chilangolabs.mdb.customviews.MDBTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Envio de Dinero"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:type="light" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.chilangolabs.mdb.customviews.MDBTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Ingresa el importe a Enviar"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:type="semiBold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:gravity="center"
+        android:hint="$00.00"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:hint="Concepto"
+        android:inputType="textAutoComplete"
+        android:maxLines="1"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <com.chilangolabs.mdb.customviews.MDBTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Christian Ceciliano"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    app:type="semiBold" />
+
+                <com.chilangolabs.mdb.customviews.MDBTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tarjeta: •••• •••• •••• 9384"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:type="light" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgTransferPay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_transfer_card" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <com.chilangolabs.mdb.customviews.MDBTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sebastian Tellez"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    app:type="semiBold" />
+
+                <com.chilangolabs.mdb.customviews.MDBTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tarjeta: •••• •••• •••• 2784"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:type="light" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

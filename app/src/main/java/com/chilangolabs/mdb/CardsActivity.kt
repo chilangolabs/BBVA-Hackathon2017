@@ -46,7 +46,7 @@ class CardsActivity : AppCompatActivity() {
 
         rcCardsMainViewAccounts.adapter = AdapterAccounts(dataAccounts) {
             val account = dataAccounts[it]
-            startActivity<AddDestinyAccountActivity>("name" to account.nameAccount, "card" to account.cardNum)
+            startActivity<TransferActivity>("name" to account.nameAccount, "card" to account.cardNum)
         }
 
         fabAddAccount.setOnClickListener {
