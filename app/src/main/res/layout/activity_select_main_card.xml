@@ -48,7 +48,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="40dp"
         android:text="Selecciona tu tarjeta principal"
         android:textColor="@android:color/white"
         android:textSize="20sp"
@@ -64,6 +63,7 @@
         android:paddingTop="40dp">
 
         <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcMainCardSelect"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/btnMainCardSelect"
@@ -80,7 +80,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/bg_button_blue_gradient"
             android:gravity="center"
-            android:text="Entrar"
+            android:text="Continuar"
             android:textColor="@android:color/white" />
 
     </RelativeLayout>

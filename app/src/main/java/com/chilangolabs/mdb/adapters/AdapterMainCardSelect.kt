@@ -12,26 +12,44 @@ import kotlinx.android.synthetic.main.item_main_card_select.view.*
  * @author Gorro.
  */
 class AdapterMainCardSelect(val data: List<ItemCardMainSelect>) : RecyclerView.Adapter<AdapterMainCardSelect.ViewHolder>() {
+
+    var lastCheckedPosition: Int = -1
+
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder =
             ViewHolder(LayoutInflater.from(parent?.context).inflate(R.layout.item_main_card_select, parent, false))
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
-        holder?.bindView(data[position], position)
+
+        val item = data[position]
+        holder?.getItemView()?.let {
+            with(it) {
+                imgItemCardMain.setImageResource(item.img)
+                txtItemCardMainName.text = item.cardName
+                txtItemCardMainPlaceNum.text = item.numPh
+//                    rdBtnItemCardMain.isChecked = item.selected
+                rdBtnItemCardMain.isChecked = position == lastCheckedPosition
+
+                rdBtnItemCardMain.setOnClickListener {
+                    lastCheckedPosition = holder.adapterPosition
+
+                    notifyDataSetChanged()
+                }
+
+                it.setOnClickListener {
+                    lastCheckedPosition = holder.adapterPosition
+
+                    notifyDataSetChanged()
+                }
+            }
+        }
     }
 
     override fun getItemCount(): Int = data.size
 
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        fun bindView(item: ItemCardMainSelect, pos: Int) {
-            itemView?.let {
-                with(it) {
-                    imgItemCardMain.setImageResource(item.img)
-                    txtItemCardMainName.text = item.cardName
-                    txtItemCardMainPlaceNum.text = item.numPh
-                    rdBtnItemCardMain.isSelected = item.selected
-                }
-            }
-        }
+
+        fun getItemView() = itemView
+
     }
 }
