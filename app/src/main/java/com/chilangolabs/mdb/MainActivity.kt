@@ -13,6 +13,7 @@ import com.dev21.fingerprintassistant.FingerprintAuthListener
 import com.dev21.fingerprintassistant.FingerprintHelper
 import com.dev21.fingerprintassistant.FingerprintResultsHandler
 import com.dev21.fingerprintassistant.ResponseCode
+import com.google.firebase.messaging.FirebaseMessaging
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
 
@@ -32,6 +33,8 @@ class MainActivity : AppCompatActivity(), FingerprintAuthListener {
         setContentView(R.layout.activity_main)
 
         window.statusBarColor = resources.getColor(R.color.colorStatusBar)
+
+        FirebaseMessaging.getInstance().subscribeToTopic("mdb")
 
         val display = windowManager.defaultDisplay
         display.getSize(point)

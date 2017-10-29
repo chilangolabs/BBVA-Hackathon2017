@@ -1,8 +1,10 @@
 package com.chilangolabs.mdb
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_register_personal_info.*
+import org.jetbrains.anko.intentFor
+import org.jetbrains.anko.singleTop
 
 class RegisterPersonalInfoActivity : AppCompatActivity() {
 
@@ -11,7 +13,8 @@ class RegisterPersonalInfoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register_personal_info)
 
         btnRegisterPersonalInfo.setOnClickListener {
-
+            startActivity(intentFor<CardsActivity>().singleTop())
+            finish()
         }
     }
 }
