@@ -68,14 +68,13 @@
         android:text="Número de Teléfono"
         app:type="regular" />
 
-    <com.chilangolabs.mdb.customviews.MDBEditTextView
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
         android:background="@drawable/bg_border_corner_radius_edtx"
         android:inputType="number"
-        android:maxLines="1"
-        app:type="regular" />
+        android:maxLines="1" />
 
     <com.chilangolabs.mdb.customviews.MDBTextView
         android:layout_width="wrap_content"
@@ -85,16 +84,15 @@
         android:text="Contraseña"
         app:type="regular" />
 
-    <com.chilangolabs.mdb.customviews.MDBEditTextView
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
         android:background="@drawable/bg_border_corner_radius_edtx"
         android:inputType="textPassword"
-        android:maxLines="1"
-        app:type="regular" />
+        android:maxLines="1" />
 
-    <com.chilangolabs.mdb.customviews.MDBButton
+    <Button
         android:id="@+id/btnMainInit"
         style="?attr/buttonBarStyle"
         android:layout_width="207dp"
@@ -103,8 +101,7 @@
         android:background="@drawable/bg_button_blue_gradient"
         android:gravity="center"
         android:text="Entrar"
-        android:textColor="@android:color/white"
-        app:type="medium" />
+        android:textColor="@android:color/white" />
 
 
     <com.chilangolabs.mdb.customviews.MDBTextView

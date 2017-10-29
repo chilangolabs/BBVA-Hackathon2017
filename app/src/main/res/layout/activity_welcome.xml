@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -30,12 +31,13 @@
                 android:scaleType="centerInside"
                 android:src="@drawable/ic_bbva_white" />
 
-            <TextView
+            <com.chilangolabs.mdb.customviews.MDBTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Micro Dispersión"
                 android:textColor="@android:color/white"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                app:type="light" />
 
         </LinearLayout>
 
@@ -48,30 +50,33 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <TextView
+        <com.chilangolabs.mdb.customviews.MDBTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="¡Bienvenido Christian!"
             android:textColor="@android:color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            app:type="semiBold" />
 
-        <TextView
+        <com.chilangolabs.mdb.customviews.MDBTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:text="Esto es Bancomer Micro Dispersión\nuna aplicación para ayudarte a dristribuir mejor el dinero para tus empleados\n\nEmpezaremos configurando tu cuenta"
             android:textColor="@android:color/white"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            app:type="light" />
 
         <Button
             android:layout_width="207dp"
             android:layout_height="42dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/bg_button_corner_white"
+            android:gravity="center"
             android:text="Comencemos"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="@color/colorPrimary"
+            app:type="semiBold" />
 
     </LinearLayout>
 
