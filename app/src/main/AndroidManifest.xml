@@ -8,8 +8,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppThemeBlueForm">
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,11 +21,10 @@
             android:name=".WelcomeActivity"
             android:theme="@style/AppThemeBlue" />
         <activity
-            android:name=".TellUsAboutYourBussines"
-            android:theme="@style/AppThemeBlueForm" />
+            android:name=".TellUsAboutYourBussines" />
         <activity
-            android:name=".SelectMainCardActivity"
-            android:theme="@style/AppThemeBlueForm" />
+            android:name=".SelectMainCardActivity" />
+        <activity android:name=".AddDestinyAccountActivity"></activity>
     </application>
 
 </manifest>

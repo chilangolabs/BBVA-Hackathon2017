@@ -14,7 +14,7 @@
         <ImageView
             android:id="@+id/imgItemCardMain"
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:layout_margin="10dp"
             android:layout_weight="2"
             android:src="@drawable/card_fake" />
