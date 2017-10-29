@@ -8,13 +8,11 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppThemeBlueForm">
-
         <service android:name=".services.MDBFirebaseMessaginService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
         <service android:name=".services.FirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
@@ -41,7 +39,8 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".NewAccountBancomerActivity" />
         <activity android:name=".RegisterAccountCPCURPActivity" />
-        <activity android:name=".RegisterPersonalInfoActivity"></activity>
+        <activity android:name=".RegisterPersonalInfoActivity" />
+        <activity android:name=".RegisterAddressActivity"></activity>
     </application>
 
 </manifest>
