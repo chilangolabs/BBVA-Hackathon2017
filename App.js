@@ -21,7 +21,8 @@ export default class App extends React.Component {
     })
     this.state = {
       seed: null,
-      message: null
+      message: null,
+      phone: '5551938813'
     }
   }
   componentWillMount () {
@@ -38,7 +39,11 @@ export default class App extends React.Component {
 
   vinculate () {
     ;(async () => {
-      let data = await fetch('https://bd5c0ba9.ngrok.io/link')
+      let data = await fetch('https://bd5c0ba9.ngrok.io/link', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({phone: this.state.phone})
+      })
       alert('Te llegará un enlace de vinculación')
     })()
   }
@@ -46,9 +51,9 @@ export default class App extends React.Component {
   notification () {
     setTimeout(() => {
       fetch('https://bd5c0ba9.ngrok.io/notification', {
-        headers: {
-          'ETag': null
-        }
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, 
+        body: JSON.stringify({phone: this.state.phone})
       })
     }, 1000)
   }
@@ -61,11 +66,11 @@ export default class App extends React.Component {
             {!this.state.seed && !this.state.message && 
               <Form>  
                 <Card>
-              <CardItem header><Text>Vincula tu dispositivo</Text></CardItem>
+                  <CardItem header><Text>Vincula tu dispositivo</Text></CardItem>
                   <CardItem><Body>
                     <Item floatingLabel>
                       <Label>Teléfono</Label>
-                      <Input keyboardType='phone-pad'  />
+                      <Input keyboardType='phone-pad' value={this.state.phone} onChangeText={(text) => this.setState((prev) => ({...prev, phone:text}))} />
                     </Item>
                   </Body></CardItem>
                   <CardItem footer>
@@ -79,13 +84,23 @@ export default class App extends React.Component {
             {this.state.seed && !this.state.message &&
               <Card>
                 <CardItem>
-                  <Text>Dispositivo Vinculado</Text>
-                <CardItem>
+                  <Body>
+                    <Text>Dispositivo Vinculado</Text>
+                  </Body>
+                </CardItem>
               </Card>
             }
             {this.state.seed && this.state.message && 
               <Card>
-                <Text>Tienes preaprobado un crédito</Text>
+                <CardItem header>
+                  <Text>Tienes un crédito pre-aprobado.</Text>
+                </CardItem>
+                <CardItem>
+                  <Body>
+                    <Button style={{backgroundColor: '#009688'}}><Text>Continuar</Text></Button>
+                    <Button><Text>Después</Text></Button>
+                  </Body>
+                </CardItem>
               </Card>
             }
           </Content>
