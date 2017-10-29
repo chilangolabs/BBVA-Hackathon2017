@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context="com.chilangolabs.mdb.AddDestinyAccountActivity">
+    tools:context="com.chilangolabs.mdb.RegisterAccountCPCURPActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -47,12 +47,20 @@
     <com.chilangolabs.mdb.customviews.MDBTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
         android:layout_marginTop="40dp"
-        android:text="Añade una cuenta destino"
+        android:text="Vamos a comenzar el registro"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         app:type="semiBold" />
+
+    <com.chilangolabs.mdb.customviews.MDBTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Ingresa la siguiente información"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:type="regular" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -60,86 +68,61 @@
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:background="@drawable/bg_form_white_border"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/btnAddNewAccount"
+            android:layout_above="@+id/btnRegisterCP"
             android:layout_alignParentTop="true"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="10dp">
 
-            <LinearLayout
-                android:id="@+id/containerAddAccountNewBancomer"
+
+            <com.chilangolabs.mdb.customviews.MDBTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Código Postal" />
+
+            <EditText
+                style="@style/edtx_form"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLines="1" />
 
-                <com.chilangolabs.mdb.customviews.MDBTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Nueva cuenta Bancomer"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="18sp"
-                    app:type="semiBold" />
+            <com.chilangolabs.mdb.customviews.MDBTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="CURP" />
 
-                <ImageView
-                    android:layout_width="200dp"
-                    android:layout_height="120dp"
-                    android:src="@drawable/ic_card_nomina" />
-
-            </LinearLayout>
-
-            <View
+            <EditText
+                style="@style/edtx_form"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#37000000" />
-
-            <LinearLayout
-                android:id="@+id/containerAddAccountOtherBank"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <com.chilangolabs.mdb.customviews.MDBTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Cuenta de otro banco"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="18sp"
-                    app:type="semiBold" />
-
-                <ImageView
-                    android:layout_width="180dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/ic_any_card_mastercard" />
-
-            </LinearLayout>
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1" />
 
         </LinearLayout>
 
         <Button
-            android:id="@+id/btnAddNewAccount"
+            android:id="@+id/btnRegisterCP"
             style="?attr/buttonBarStyle"
             android:layout_width="207dp"
             android:layout_height="42dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/bg_button_blue_gradient"
-            android:text="Omitir"
+            android:gravity="center"
+            android:text="Continuar"
             android:textColor="@android:color/white" />
 
-    </RelativeLayout>
 
+    </RelativeLayout>
 
 </LinearLayout>

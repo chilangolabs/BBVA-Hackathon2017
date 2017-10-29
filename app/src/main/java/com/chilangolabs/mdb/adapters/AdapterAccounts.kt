@@ -11,12 +11,15 @@ import kotlinx.android.synthetic.main.item_accounts.view.*
 /**
  * @author Gorro.
  */
-class AdapterAccounts(val data: List<ItemAcounts>) : RecyclerView.Adapter<AdapterAccounts.ViewHolder>() {
+class AdapterAccounts(val data: List<ItemAcounts>, val f: (pos: Int) -> Unit) : RecyclerView.Adapter<AdapterAccounts.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder =
             ViewHolder(LayoutInflater.from(parent?.context).inflate(R.layout.item_accounts, parent, false))
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
         holder?.bindView(data[position])
+        holder?.itemView?.setOnClickListener {
+            f(position)
+        }
     }
 
     override fun getItemCount(): Int = data.size
@@ -30,6 +33,7 @@ class AdapterAccounts(val data: List<ItemAcounts>) : RecyclerView.Adapter<Adapte
                     txtItemAccountName.text = item.nameAccount
                     txtItemAccountCard.text = "Tarjeta: ${item.cardNum}"
                 }
+
             }
         }
     }

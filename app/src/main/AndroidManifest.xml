@@ -27,6 +27,9 @@
         <activity
             android:name=".CardsActivity"
             android:theme="@style/AppTheme" />
+        <activity android:name=".NewAccountBancomerActivity" />
+        <activity android:name=".RegisterAccountCPCURPActivity" />
+        <activity android:name=".RegisterPersonalInfoActivity"></activity>
     </application>
 
 </manifest>

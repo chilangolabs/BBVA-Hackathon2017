@@ -1,6 +1,7 @@
 package com.chilangolabs.mdb
 
 import android.os.Bundle
+import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_add_destiny_account.*
 import org.jetbrains.anko.startActivity
@@ -14,7 +15,7 @@ class AddDestinyAccountActivity : AppCompatActivity() {
         var type = 0
 
         intent?.extras?.let {
-            val btnString = it.getString("button")
+            val btnString = it.getString("boton")
             btnAddNewAccount.text = btnString
             type = it.getInt("type")
         }
@@ -24,6 +25,20 @@ class AddDestinyAccountActivity : AppCompatActivity() {
                 startActivity<CardsActivity>()
             else
                 finish()
+        }
+
+        containerAddAccountNewBancomer.setOnClickListener {
+            startActivity<NewAccountBancomerActivity>()
+        }
+
+        containerAddAccountOtherBank.setOnClickListener {
+            AlertDialog.Builder(this)
+                    .setTitle("¡Ups!")
+                    .setMessage("Función no disponible por el momento")
+                    .setPositiveButton("Ok", { dialog, _ ->
+                        dialog.dismiss()
+                    })
+                    .show()
         }
 
     }
